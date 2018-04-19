@@ -6,8 +6,10 @@ typedef struct node {
     struct node * next;
 } node_t;
 
-// percolation //
+// bond percolation in a lattice //
 typedef struct vertex  {
+	int coordx;
+	int coordy;
 	struct edge * north;
 	struct edge * south;
 	struct edge * east;
@@ -40,6 +42,15 @@ void main(){
                 current = current->next;
 		count++;
 	}
+
+	vertex_t * origin = NULL;
+	origin = malloc(sizeof(vertex_t));
+
+	// its edges are open w.p. p
+	int p = 0.2;
+
+
+
 
 }
 
